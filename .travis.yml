@@ -1,33 +1,29 @@
 lenguage: node_js
 cache:
   directories:
-    - node_modules
-    - ~/.npm
-
+  - node_modules
+  - "~/.npm"
 node_js:
-  - '12'
-
+- '12'
 git:
   depth: 3
-
 script:
-  - yarn build
-
+- yarn build
 notifications:
-  slack: curso-webpack:OLpF7rBBcVhLIYqkGLUjg4xC
+  slack:
+    secure: "NP6usNgWtPNuejvRWahNegQrl5m6pWcnIeMNiKltY214IOGDuLfrQiGt76CGeLhlMum5/dexD96ieFQGo+iIw4UotN5fGkU1GdDFIuIOUWNmqWxJui/Yr6oJgx/kXAjMFeCGAaK1epECLX0XLx8Iom9bU9JJKVSgt7cqGZFvVhmHgewyr41OSNlQ61eXwJkx6eDiVbMifmFkY1ql9/PWs+TIs5Iq+qU8lGaOHoB+JWRZMg0RzGsRiCcv1EXNYhRKEMdgyJNIeZpp7KcVFHNbp2qyDcm2B/UGgEWy/X/VPztBwtaZGt8Zei5JfP+VtYyK+4tUQTsNW+k4/pq0+vczLm88ZoUDAsUFUMORcX/5X1faNEWpqRqqurI+ytP75VQYyCnUOEcWw56SD/8Ls7A6WE5GWjCZMf9HPiVp0Pdq75Fn81217mn1pKSQPe07sEy+bukveHgN5ZecB3biyOtZrhIBZ2yNCMFFqLt5fbCelTvopxebNYZB3qki/rYB7mQ2iUEZlAvIknhMD5KhO9XR3B+98NYBHfJ8DsF+AxV7BzkC4ZUH3KJX65KiCeZRNk1cj40GWlSMKaaWmJSQCAXosh86iWnrepReQFYR9DwOZ74MoV2BgF77ReZ8tVzI2G+A00cZVGl66kq+x8Ocj7bJZTXMk4TOYL1H+tVnDgFcLYI="
   email:
-    recipients: 
-      - leo63582@gmail.com
+    recipients:
+    - leo63582@gmail.com
   on_succes: always
   on:failure: always
-
 deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
-  github_token: $GITHUB_TOKEN
+  github_token: "$GITHUB_TOKEN"
   local_dir: dist/
   target_branch: gh-page
-  commit_message: 'Deploy del proyecto'
+  commit_message: Deploy del proyecto
   on:
     branch: main
