@@ -1,12 +1,20 @@
 {
   "name": "travis",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Curso de Pruebas unitarias con Jest",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonAngelit/platzi-store-1.git"
+  },
   "keywords": [],
-  "author": "Leon Angelit",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonAngelit/platzi-store-1/issues"
+  },
+  "homepage": "https://github.com/LeonAngelit/platzi-store-1#readme"
 }
