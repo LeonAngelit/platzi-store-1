@@ -14,6 +14,7 @@ script:
   - yarn build
 
 notifications:
+  slack: curso-webpack:OLpF7rBBcVhLIYqkGLUjg4xC
   email:
     recipients: 
       - leo63582@gmail.com
