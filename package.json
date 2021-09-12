@@ -4,7 +4,10 @@
   "description": "Curso de Pruebas unitarias con Jest",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,26 @@
   "bugs": {
     "url": "https://github.com/LeonAngelit/platzi-store-1/issues"
   },
-  "homepage": "https://github.com/LeonAngelit/platzi-store-1#readme"
+  "homepage": "https://github.com/LeonAngelit/platzi-store-1#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "redux": "^4.1.1",
+    "stylus-loader": "^6.1.0",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.0"
+  },
+  "dependencies": {
+    "html-loader": "^2.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }

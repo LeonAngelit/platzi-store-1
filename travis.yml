@@ -10,20 +10,14 @@ branches:
     - experimental
   only:
     - master
+    - main
     - stable
 
-before_install:
-  - python
-
-install: 
-  - yarn install
-
 script:
-  - yarn deploy
-  - yarn test
+  - yarn build
 
 before_script:
-  - yarnt test
+  - yart test
 
 after_script:
   - yarn clean
@@ -31,6 +25,10 @@ after_script:
 cache:
   directories:
     - node_modules
+    - ~/.npm
+
+  node_js: 
+    - '14'
 
 jobs:
   include: 
@@ -41,8 +39,14 @@ jobs:
       script: yarn deploy
 
 deploy:
-  provider: heroku
-  on
-    repo: LeonAngelit/Platzi-store
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: gh-pages
+  commit_message: "Deploy del proyecto"
+  on:
+    branch: main
+
 
 
