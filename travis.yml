@@ -4,15 +4,6 @@ os: gnu-linux
 git:
   depth: 3
 
-branches:
-  except:
-    - legacy
-    - experimental
-  only:
-    - master
-    - main
-    - stable
-
 script:
   - yarn build
 
